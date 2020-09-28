@@ -17,7 +17,7 @@ public class Address {
 		int choice = 0;
 		
 		int count = 0;
-		
+		do {
 			System.out.println("Press 1 to Add Contact");
 			System.out.println("Press 2 to Update a Contact");
 			System.out.println("Press 3 to Delete a Contact");
@@ -53,7 +53,17 @@ public class Address {
 			add.modifyPerson(input);
 			break;
 			
-		
+		case 3:
+			if(count==0) {
+				System.out.println("The List is Empty");
+				break;
+			}
+			
+			System.out.println("Enter the First Name of the Person whose details you wantt to delete");
+			String delete  = scan.next();
+			add.deletePerson(delete);
+			count--;
+			break;
 		case 4:
 			if(count == 0)
 				System.out.println("The List is empty");
@@ -61,8 +71,8 @@ public class Address {
 			System.out.println("Thank you for Visiting the Address Book");
 			break;
 		}
-	
-	
+
+		}while(choice!=4);
 		
 	}
 }
