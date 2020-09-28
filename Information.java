@@ -65,6 +65,20 @@ public class Information {
 			}
 			}
 		}
+		
+	}
+	public void deletePerson(String delete) {
+		
+		for(int i=0;i<person.size();i++) {
+			Directory data = (Directory)person.get(i);
+			
+			if(delete.equals(data.getFirst_Name())) {
+				person.remove(i);
+				System.out.println("The Contact with first name "+delete+" is deleted");
+				
+			}
+			
+		}
 	}
 	
 } 
