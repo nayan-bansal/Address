@@ -1,4 +1,4 @@
-package address;
+package AddressBook;
 
 public class Directory {
 
@@ -7,6 +7,7 @@ public class Directory {
 	private String last_Name;
 	private String address;
 	private String city_Name;
+	private String state;
 	private int zip_Number;
 	private long phone_Number;
 	private String email_Id;
@@ -14,7 +15,7 @@ public class Directory {
 	public String getFirst_Name() {
 		return first_Name;
 	}
-	public void setFirst_Name (String first_name) {
+	public void setFirst_Name (String first_Name) {
 		this.first_Name = first_Name;
 	}
 	
@@ -34,8 +35,14 @@ public class Directory {
 	public String getCity_Name() {
 		return city_Name;
 	}
-	public void setCity_Name() {
+	public void setCity_Name(String city_Name) {
 		this.city_Name = city_Name;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
 	}
 	public int getZip_Number() {
 		return zip_Number;
@@ -55,5 +62,4 @@ public class Directory {
 	public void setEmail_Id(String email_Id) {
 		this.email_Id = email_Id;
 	}
-	
 }
