@@ -68,7 +68,7 @@ public class Address {
 			if(count == 0)
 				System.out.println("The List is empty");
 			
-			System.out.println("Thank you for Visiting the Address Book");
+			System.out.println("Thank you for Visiting the Address Book. Welcome!!");
 			break;
 		}
 
