@@ -74,7 +74,7 @@ public class Information {
 			
 			if(delete.equals(data.getFirst_Name())) {
 				person.remove(i);
-				System.out.println("The Contact with first name "+delete+" is deleted");
+				System.out.println("The Contact with first name "+delete+" has been deleted");
 				
 			}
 			
