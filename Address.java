@@ -13,15 +13,17 @@ public class Address {
 		Information add = new Information();
 		
 		Scanner scan = new Scanner(System.in);
+
+		int choice = 0;
 		
-		System.out.println("Press 1 to Add Contact");
-		System.out.println("Press 2 to Update a Contact");
-		System.out.println("Press 3 to Delete a Contact");
-		System.out.println("Press 4 to Exit");
-		
-		int choice = scan.nextInt();
 		int count = 0;
 		
+			System.out.println("Press 1 to Add Contact");
+			System.out.println("Press 2 to Update a Contact");
+			System.out.println("Press 3 to Delete a Contact");
+			System.out.println("Press 4 to Exit");
+			
+			choice = scan.nextInt();
 		switch(choice) {
 		case 1:
 			Directory data = new Directory();
@@ -44,10 +46,14 @@ public class Address {
 			add.addPerson(data);
 			count++;
 			break;
+			
 		case 2:
+			System.out.println("Enter the First name of the person whoose detail you want to Edit");
+			String input = scan.next();
+			add.modifyPerson(input);
 			break;
-		case 3:
-			break;
+			
+		
 		case 4:
 			if(count == 0)
 				System.out.println("The List is empty");
@@ -55,7 +61,7 @@ public class Address {
 			System.out.println("Thank you for Visiting the Address Book");
 			break;
 		}
-		
+	
 	
 		
 	}
