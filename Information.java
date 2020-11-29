@@ -8,18 +8,18 @@ public class Information {
 	// Array list to store contact person details
 	
 		
-	private ArrayList<PersonInfo> person=new ArrayList<PersonInfo>();
+	private ArrayList<Directory> person=new ArrayList<Directory>();
 		
-	public void setPerson(ArrayList<PersonInfo> person) {
+	public void setPerson(ArrayList<Directory> person) {
 		this.person=person;
 	}
 	
-	public ArrayList<PersonInfo> getPerson() {
+	public ArrayList<Directory> getPerson() {
 		return person;
 	}
 	
 	//Method to add contact person details
-	public void addPerson(PersonInfo pobj ) {
+	public void addPerson(Directory pobj ) {
 		person.add(pobj);
 	}
 	
@@ -29,14 +29,14 @@ public class Information {
 		}
 	
 	//Method to check all contacts available 
-	public ArrayList<PersonInfo> viewAllContacts(){
+	public ArrayList<Directory> viewAllContacts(){
 		return person;
 	}	
 	
 	//Method to modify details
      	public void Modify(String name,int info_name){
     		for(int i = 0; i < person.size(); i++){
-             	PersonInfo p = (PersonInfo)person.get(i);
+             	Directory p = (Directory)person.get(i);
              	if(name.equals(p.getFirst_name())){
             		System.out.println("Modify Details");
             	 	switch(info_name) {
@@ -79,7 +79,7 @@ public class Information {
      	//Method to remove contact details
     	public void remove(String name){
             for(int i = 0; i < person.size(); i++){
-            	PersonInfo p = (PersonInfo)person.get(i); 
+            	Directory p = (Directory)person.get(i); 
             	if(name.equals(p.getFirst_name())){
             		person.remove(i);
             		System.out.println("Details of "+name+" removed");
