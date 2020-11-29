@@ -1,6 +1,6 @@
 package AddressBook;
 
-public class Main {
+public class  Directory{
 
 	
 	private String first_name;
