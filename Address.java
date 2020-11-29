@@ -1,7 +1,5 @@
 package AddressBook;
 
-import java.util.*;
-
 public class Address {
 
 	public static void main(String[] args) {
@@ -9,10 +7,10 @@ public class Address {
 			//Printing welcome message
 			System.out.println("Welcome To Address Book Program");
 			
-			ContactPerson add = new ContactPerson();
+			Information add = new Information();
 			// while loop to take inputs from person
 			Scanner obj = new Scanner(System.in);
-			AddressBookDict address=new AddressBookDict();
+			Main address=new Main();
 			while(true) {
 				System.out.println("Enter 1 to add addressbook");
 				System.out.println("Enter 0 to exit");
@@ -20,7 +18,7 @@ public class Address {
 				if(ch1==1) {
 					System.out.println("Enter the Address Book Name");
 					String add_book_name=obj.next();
-					PersonInfo p=new PersonInfo();
+					Directory p=new Directory();
 					address.addAddressBook(add_book_name,p);
 					while(true) {
 						System.out.println("Enter 1 to add details");
@@ -50,14 +48,14 @@ public class Address {
 							add.addPerson(p);
 							}
 						else if(ch==2) {
-							ArrayList<PersonInfo> result = add.viewAllContacts();
+							ArrayList<Directory> result = add.viewAllContacts();
 							if(result.isEmpty()) {
 								System.out.println("List is empty");
 								continue;
 							}
-							Iterator<PersonInfo> iter=result.iterator();
+							Iterator<Directory> iter=result.iterator();
 							while(iter.hasNext()) {
-								PersonInfo p1=(PersonInfo)iter.next();
+								Directory p1=(Directory)iter.next();
 								System.out.println("Address Book Name"+add_book_name);
 								System.out.println("First Name-"+p1.getFirst_name());
 								System.out.println("Last Name-"+p1.getLast_name());
@@ -70,7 +68,7 @@ public class Address {
 								}
 							}
 						else if(ch==3) {
-								ArrayList<PersonInfo> result = add.viewAllContacts();
+								ArrayList<Directory> result = add.viewAllContacts();
 								if(result.isEmpty()) {
 									System.out.println("List is empty");
 									continue;
